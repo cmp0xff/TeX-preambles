@@ -1,5 +1,4 @@
-## TeX source and target file
-*.tex
+## TeX target file
 *.pdf
 
 ## Core latex/pdflatex auxiliary files:
