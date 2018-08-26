@@ -73,3 +73,28 @@
 % Unicode astronomy
 \newcommand{\Earth}{🜨}
 \newcommand{\Moon}{☽︎}
+
+% tilde below
+% https://tex.stackexchange.com/a/229598
+\usepackage{stackengine}
+\stackMath
+\newcommand\tenq[2][1]{%
+ \def\useanchorwidth{T}%
+  \ifnum#1>1%
+    \stackunder[0pt]{\tenq[\numexpr#1-1\relax]{#2}}{\scriptscriptstyle\sim}%
+  \else%
+    \stackunder[1pt]{#2}{\scriptscriptstyle\sim}%
+  \fi%
+}
+
+% tilde above
+% https://tex.stackexchange.com/a/415660
+\stackMath
+\newcommand\tsup[2][2]{%
+ \def\useanchorwidth{T}%
+  \ifnum#1>1%
+    \stackon[-.5pt]{\tsup[\numexpr#1-1\relax]{#2}}{\scriptscriptstyle\sim}%
+  \else%
+    \stackon[.5pt]{#2}{\scriptscriptstyle\sim}%
+  \fi%
+}
