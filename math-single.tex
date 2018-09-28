@@ -98,3 +98,7 @@
     \stackon[.5pt]{#2}{\scriptscriptstyle\sim}%
   \fi%
 }
+
+% https://tex.stackexchange.com/questions/331094/tangential-part
+\usepackage{graphicx,stackengine,scalerel}
+\def\tang{\ThisStyle{\abovebaseline[0pt]{\scalebox{-1}{$\SavedStyle\perp$}}}}
